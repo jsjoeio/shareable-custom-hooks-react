@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { ToggleButton, InnerMenu } from './Nav.styles'
 
+function useMenuOpen(initialValue) {
+  // returns an array [value, updateValueFunction]
+  return useState(initialValue)
+}
+
 function Nav() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useMenuOpen(false)
 
   useEffect(() => {
     function handleClick(e) {
@@ -22,7 +27,7 @@ function Nav() {
         .querySelector('#average-react-app')
         .removeEventListener('click', handleClick, false)
     }
-  }, [])
+  }, [setOpen])
 
   return (
     <header>
