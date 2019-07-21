@@ -6,28 +6,36 @@ function useMenuOpen(initialValue) {
   return useState(initialValue)
 }
 
-function Nav() {
-  const [open, setOpen] = useMenuOpen(false)
-
+function useClickOutside({ handler, elementId, appId }) {
   useEffect(() => {
     function handleClick(e) {
       // Chrome uses e.path while Firefox uses e.composedPath()
       // Returns an array of elements in the path of the click
       const path = e.path || e.composedPath()
-      const isClickInside = path.some(element => element.id === 'inner-menu')
-      isClickInside ? console.log('clicked inside inner menu') : setOpen(false)
+      const isClickInside = path.some(element => element.id === elementId)
+      isClickInside
+        ? console.log(`clicked inside ${elementId}`)
+        : handler(false)
     }
-
-    document
-      .querySelector('#average-react-app')
-      .addEventListener('click', handleClick, false)
+    const app = `#${appId}`
+    document.querySelector(app).addEventListener('click', handleClick, false)
 
     return () => {
       document
-        .querySelector('#average-react-app')
+        .querySelector(app)
         .removeEventListener('click', handleClick, false)
     }
-  }, [setOpen])
+  }, [handler, elementId, appId])
+}
+
+function Nav() {
+  const [open, setOpen] = useMenuOpen(false)
+
+  useClickOutside({
+    handler: setOpen,
+    elementId: 'inner-menu',
+    appId: 'average-react-app'
+  })
 
   return (
     <header>
