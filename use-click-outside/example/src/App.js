@@ -1,12 +1,13 @@
 import React from 'react'
-import { useMyHook } from '@jsjoeio/use-click-outside'
+import Nav from './components/Nav/Nav'
+import { Container } from './App.styles'
 
-const App = () => {
-  const example = useMyHook()
+function App() {
   return (
-    <div>
-      {example}
-    </div>
+    <Container id="example-react-app">
+      <Nav />
+    </Container>
   )
 }
+
 export default App

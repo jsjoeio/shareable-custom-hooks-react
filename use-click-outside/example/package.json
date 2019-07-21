@@ -5,11 +5,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@jsjoeio/use-click-outside": "link:..",
     "prop-types": "^15.6.2",
     "react": "link:../node_modules/react",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.0",
-    "@jsjoeio/use-click-outside": "link:.."
+    "styled-components": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

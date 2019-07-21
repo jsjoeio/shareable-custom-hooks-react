@@ -13,13 +13,17 @@ export function useClickOutside({ initialValue, elementId, appId }) {
         ? console.log(`clicked inside ${elementId}`)
         : setOpen(false)
     }
-    const app = `#${appId}`
-    document.querySelector(app).addEventListener('click', handleClick, false)
+    // Check to make sure document is defined and element exists
+    const app = document && document.querySelector(`#${appId}`)
+
+    if (app) {
+      app.addEventListener('click', handleClick, false)
+    }
 
     return () => {
-      document
-        .querySelector(app)
-        .removeEventListener('click', handleClick, false)
+      if (app) {
+        app.removeEventListener('click', handleClick, false)
+      }
     }
   }, [setOpen, elementId, appId])
 
