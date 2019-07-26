@@ -1,4 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const focusStyles = () => css`
+  &:focus,
+  &active {
+    border-color: #2188ff;
+    box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075),
+      0 0 0 0.2em rgba(255, 60, 26, 0.3);
+    outline: none;
+  }
+`
 
 export const ToggleButton = styled.div`
   padding: 8px 16px;
@@ -12,10 +22,11 @@ export const ToggleButton = styled.div`
   right: 0;
   cursor: pointer;
   user-select: none;
+
+  ${focusStyles};
 `
 
-export const InnerMenu = styled.div`
-  text-align: center;
+export const InnerMenu = styled.ul`
   width: 160px;
   padding: 0;
   overflow: hidden;
@@ -28,22 +39,22 @@ export const InnerMenu = styled.div`
   background-color: ${props => (props.open ? 'white' : 'transparent')};
   display: ${props => (props.open ? 'block' : 'none')};
 
-  ul {
-    font-size: 20px;
-    list-style: none;
-    margin: 0;
-    text-align: left;
-    padding: 0;
-    width: 100%;
-    position: relative;
-    li {
-      cursor: pointer;
-      width: 136px;
-      padding: 6px 12px;
-      :hover {
-        color: white;
-        background-color: tomato;
-      }
+  font-size: 20px;
+  list-style: none;
+  text-align: left;
+
+  li {
+    cursor: pointer;
+    width: 136px;
+    padding: 6px 12px;
+    ${focusStyles};
+    &:hover {
+      color: white;
+      background-color: tomato;
     }
   }
+`
+
+export const MenuLink = styled.a`
+  ${focusStyles};
 `

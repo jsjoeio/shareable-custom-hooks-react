@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { ToggleButton, InnerMenu } from './Nav.styles'
+import { ToggleButton, InnerMenu, MenuLink } from './Nav.styles'
 
 function useMenuOpen(initialValue) {
   // returns an array [value, updateValueFunction]
@@ -30,25 +30,42 @@ function useClickOutside({ handler, elementId, appId }) {
 
 function Nav() {
   const [open, setOpen] = useMenuOpen(false)
-
-  useClickOutside({
-    handler: setOpen,
-    elementId: 'inner-menu',
-    appId: 'average-react-app'
-  })
+  const toggleButtonRef = React.useRef(null)
 
   return (
     <header>
       <nav>
-        <ToggleButton onClick={() => setOpen(!open)}>Menu</ToggleButton>
+        <ToggleButton
+          ref={toggleButtonRef}
+          tabIndex={0}
+          onClick={() => setOpen(!open)}
+          role="button"
+          onKeyDown={e => {
+            if (e.keyCode === 32 || e.keyCode === 13) {
+              if (e.keyCode === 32) e.preventDefault()
+              setOpen(true)
+            }
+          }}
+          onBlur={() => setOpen(false)}
+        >
+          Menu
+        </ToggleButton>
         <InnerMenu open={open} id="inner-menu">
-          <ul>
+          <MenuLink href="/home">
             <li>Home</li>
+          </MenuLink>
+          <MenuLink href="/products">
             <li>Products</li>
+          </MenuLink>
+          <MenuLink href="/values">
             <li>Values</li>
+          </MenuLink>
+          <MenuLink href="/team">
             <li>Team</li>
+          </MenuLink>
+          <MenuLink href="/contact">
             <li>Contact</li>
-          </ul>
+          </MenuLink>
         </InnerMenu>
       </nav>
     </header>
