@@ -1,8 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Form, Label, Textarea, Button } from './Feedback.styles'
 
 export function FeedbackFunctionComponent(props) {
   const [text, setText] = useState('')
+
+  useEffect(() => {
+    async function getJoke() {
+      const response = await fetch('https://api.chucknorris.io/jokes/random')
+      const { value } = await response.json()
+      setText(value)
+    }
+    getJoke()
+    console.log('Logging from the feedback function component')
+  }, [])
 
   // Handle form submission
   function handleSubmit(e) {
