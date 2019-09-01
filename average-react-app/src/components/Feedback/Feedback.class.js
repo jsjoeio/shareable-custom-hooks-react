@@ -10,6 +10,9 @@ export class FeedbackClassComponent extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     console.log(`Submitting response to API: "${this.state.text}"`)
+    this.setState({
+      text: ''
+    })
   }
   // Update text in state onchange for textarea
   handleTextChange(e) {

@@ -18,6 +18,7 @@ export function FeedbackFunctionComponent(props) {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(`Submitting response to API: "${text}"`)
+    setText('')
   }
   // Update text in state onchange for textarea
   function handleTextChange(e) {
