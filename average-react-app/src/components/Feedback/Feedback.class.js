@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, Label, Textarea, Button } from './Feedback.styles'
 
-export class Feedback extends React.Component {
+export class FeedbackClassComponent extends React.Component {
   state = {
     text: ''
   }
