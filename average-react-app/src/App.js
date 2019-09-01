@@ -1,11 +1,12 @@
 import React from 'react'
-import Nav from './components/Nav/Nav'
 import { Container } from './App.styles'
+import { Feedback } from './components/Feedback/Feedback.class'
 
 function App() {
   return (
     <Container id="average-react-app">
-      <Nav />
+      <h1>Fake Dev App</h1>
+      <Feedback />
     </Container>
   )
 }
