@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Title, Form, Label, Textarea, Button } from './Feedback.styles'
+import { Title, Form, Label, Textarea, Button, EmptyContainer } from './Feedback.styles'
 
 function useText(initialState) {
   return useState(initialState)
@@ -46,14 +46,19 @@ export function FeedbackEffectHookComponent(props) {
   if (loading) return <Form><p>Loading...</p></Form>
   if (error) return <p>{error}</p>
 
-  return (
-    <Form onSubmit={e => handleSubmit(e)}>
-      <Title>Effect Hook Example</Title>
-      <Label>
-        Have feedback for our team? <br /> Let us know here 👇
+  if (data) {
+
+    return (
+      <Form onSubmit={e => handleSubmit(e)}>
+        <Title>Effect Hook Example</Title>
+        <Label>
+          Have feedback for our team? <br /> Let us know here 👇
         <Textarea value={text} onChange={e => handleTextChange(e)} />
-      </Label>
-      <Button type="submit">Submit</Button>
-    </Form>
-  )
+        </Label>
+        <Button type="submit">Submit</Button>
+      </Form>
+    )
+  }
+
+  return <EmptyContainer />
 }

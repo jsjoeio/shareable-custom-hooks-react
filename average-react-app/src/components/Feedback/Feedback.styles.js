@@ -9,6 +9,12 @@ const Form = styled.form`
   text-align: center;
 `
 
+const EmptyContainer = styled.div`
+  margin: 3rem auto;
+  width: 300px;
+  text-align: center;
+`
+
 const Label = styled.label`
   font-size: 1.25rem;
 `
@@ -59,4 +65,4 @@ const Title = styled.h3`
   color: smoke;
 `
 
-export { Button, Form, Label, Textarea, Title }
+export { Button, Form, Label, Textarea, Title, EmptyContainer }
