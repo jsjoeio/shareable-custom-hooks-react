@@ -1,8 +1,0 @@
-{
-  "short_name": "@jsjoeio/use-click-outside",
-  "name": "@jsjoeio/use-click-outside",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
