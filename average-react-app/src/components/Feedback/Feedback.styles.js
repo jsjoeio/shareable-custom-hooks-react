@@ -5,7 +5,7 @@ const Form = styled.form`
   flex-direction: column;
   font-family: Helvetica, Arial, sans-serif;
   margin: 3rem auto;
-  max-width: 300px;
+  width: 300px;
   text-align: center;
 `
 
@@ -54,4 +54,9 @@ const Button = styled.button`
   }
 `
 
-export { Button, Form, Label, Textarea }
+const Title = styled.h3`
+  font-size: 1.6rem;
+  color: smoke;
+`
+
+export { Button, Form, Label, Textarea, Title }

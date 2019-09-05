@@ -1,9 +1,18 @@
 import React from 'react'
-import { Form, Label, Textarea, Button } from './Feedback.styles'
+import { Form, Label, Textarea, Button, Title } from './Feedback.styles'
 
 export class FeedbackClassComponent extends React.Component {
   state = {
     text: ''
+  }
+
+  componentDidMount() {
+    // Get placeholder text
+    fetch('https://api.chucknorris.io/jokes/random')
+      .then(response => response.json())
+      .then(data => this.setState({
+        text: data.value
+      }))
   }
 
   // Handle form submission
@@ -26,6 +35,7 @@ export class FeedbackClassComponent extends React.Component {
   render() {
     return (
       <Form onSubmit={e => this.handleSubmit(e)}>
+        <Title>Class Example</Title>
         <Label>
           Have feedback for our team? <br /> Let us know here 👇
           <Textarea

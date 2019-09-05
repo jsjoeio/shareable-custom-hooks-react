@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Form, Label, Textarea, Button } from './Feedback.styles'
+import { Form, Label, Textarea, Button, Title } from './Feedback.styles'
 
 export function FeedbackFunctionComponent(props) {
   const [text, setText] = useState('')
@@ -27,6 +27,7 @@ export function FeedbackFunctionComponent(props) {
   }
   return (
     <Form onSubmit={e => handleSubmit(e)}>
+      <Title>Function Example</Title>
       <Label>
         Have feedback for our team? <br /> Let us know here 👇
         <Textarea value={text} onChange={e => handleTextChange(e)} />
