@@ -5,7 +5,7 @@
   <p align="center">
     <br />
     <!-- UPDATE THIS WITH EGGHEAD LINK -->
-    <a href="https://github.com/jsjoeio/shareable-custom-hooks-react"><strong>Take Course</strong></a>
+    <a href="https://ti.to/egghead-live-online-events/create-publish-custom-react-hooks-with-joe-previte/"><strong>Take Workshop</strong></a>
     <br />
     <br />
     <a href="https://github.com/jsjoeio/shareable-custom-hooks-react">Ask a Question</a>
@@ -16,24 +16,24 @@
 
 ## Table of Contents
 
-- [About the Course](#about-the-course)
-  - [Course Goal](#course-goal)
-  - [Course Outcomes](#course-outcomes)
+- [About the Workshop](#about-the-workshop)
+  - [Workshop Goals](#workshop-goals)
+  - [Workshop Outcomes](#workshop-outcomes)
 - [Prerequisites](#prerequisites)
 - [Further Learning](#further-learning)
 - [Resources](#resources)
 
-## About The Course
+## About The Workshop
 
 Hooks are awesome because they're "first-class" utility functions provided by React to let you hook into state and other features while writing components. The cool thing about Hooks is that you can build on top of them to make your own. It’s like writing a function on top of lodash. You can gather something that might be reusable, and then package it up into a custom hook. That is the beauty of writing a shareable custom Hook in React.
 
-### Course Goal
+### Workshop Goals
 
-After completing this course, you will understand how to write custom Hooks in React, and publish them as npm packages for the open source community.
+After completing this workshop, you will understand how to write custom Hooks in React, and publish them as npm packages for the open source community.
 
-### Course Outcomes
+### Workshop Outcomes
 
-By taking this course, you will learn how to:
+By taking this workshop, you will learn how to:
 
 1. Understand what a “first-class” Hook is and isn’t
 2. Understand what a custom Hook is
@@ -44,7 +44,7 @@ By taking this course, you will learn how to:
 
 ## Prerequisites
 
-Although this course is not targeted at React experts you'll need the following:
+Although this workshop is not targeted at React experts you'll need the following:
 
 - moderate React experience
 - some familiarity with Hooks
@@ -52,7 +52,7 @@ Although this course is not targeted at React experts you'll need the following:
 
 ## Resources
 
-If you run into road blocks at anytime in the course or want additional resources, here's a list of things to check out:
+If you run into road blocks at anytime in the workshop or want additional resources, here's a list of things to check out:
 
 - Wrapping your head around the bundle outputs.
   - [The State of JavaScript Modules](https://medium.com/webpack/the-state-of-javascript-modules-4636d1774358)
