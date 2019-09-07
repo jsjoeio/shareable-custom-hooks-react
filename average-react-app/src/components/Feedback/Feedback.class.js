@@ -10,12 +10,11 @@ export class FeedbackClassComponent extends React.Component {
     // Get placeholder text
     fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
       .then(response => response.json())
-      .then(data => {
-        console.log(data)
+      .then(data =>
         this.setState({
           text: data.starWarsQuote
         })
-      })
+      )
   }
 
   // Handle form submission
