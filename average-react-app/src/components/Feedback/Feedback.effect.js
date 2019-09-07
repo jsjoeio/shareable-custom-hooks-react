@@ -13,10 +13,15 @@ function useStarWarsQuote() {
   useEffect(() => {
     async function getStarWarsQuote() {
       setLoading(true)
-      const response = await fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
-      const { starWarsQuote } = await response.json().catch(error => setError(error))
-      setLoading(false)
-      setData(starWarsQuote)
+      try {
+        const response = await fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
+        const { starWarsQuote } = await response.json().catch(error => setError(error))
+        setLoading(false)
+        setData(starWarsQuote)
+      } catch (e) {
+        setLoading(false)
+        setError(e.message)
+      }
     }
     getStarWarsQuote()
   }, [])
