@@ -8,12 +8,12 @@ function useText(initialState) {
 export function FeedbackStateHookComponent(props) {
   const [text, setText] = useText('')
   useEffect(() => {
-    async function getJoke() {
-      const response = await fetch('https://api.chucknorris.io/jokes/random')
-      const { value } = await response.json()
-      setText(value)
+    async function getStarWarsQuote() {
+      const response = await fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
+      const { starWarsQuote } = await response.json()
+      setText(starWarsQuote)
     }
-    getJoke()
+    getStarWarsQuote()
     console.log('Logging from the feedback function component')
   }, [setText])
 

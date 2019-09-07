@@ -5,27 +5,27 @@ function useText(initialState) {
   return useState(initialState)
 }
 
-function useChuckNorris() {
+function useStarWarsQuote() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(undefined)
   const [data, setData] = useState(undefined)
 
   useEffect(() => {
-    async function getJoke() {
+    async function getStarWarsQuote() {
       setLoading(true)
-      const response = await fetch('https://api.chucknorris.io/jokes/random')
-      const { value } = await response.json().catch(error => setError(error))
+      const response = await fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
+      const { starWarsQuote } = await response.json().catch(error => setError(error))
       setLoading(false)
-      setData(value)
+      setData(starWarsQuote)
     }
-    getJoke()
+    getStarWarsQuote()
   }, [])
   return { data, loading, error }
 }
 
 export function FeedbackEffectHookComponent(props) {
   const [text, setText] = useText('')
-  const { data, loading, error } = useChuckNorris()
+  const { data, loading, error } = useStarWarsQuote()
 
   useEffect(() => {
     if (data) setText(data)

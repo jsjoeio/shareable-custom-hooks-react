@@ -8,11 +8,14 @@ export class FeedbackClassComponent extends React.Component {
 
   componentDidMount() {
     // Get placeholder text
-    fetch('https://api.chucknorris.io/jokes/random')
+    fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
       .then(response => response.json())
-      .then(data => this.setState({
-        text: data.value
-      }))
+      .then(data => {
+        console.log(data)
+        this.setState({
+          text: data.starWarsQuote
+        })
+      })
   }
 
   // Handle form submission
