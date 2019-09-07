@@ -8,7 +8,7 @@
     <a href="https://ti.to/egghead-live-online-events/create-publish-custom-react-hooks-with-joe-previte/"><strong>Take Workshop</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jsjoeio/shareable-custom-hooks-react">Ask a Question</a>
+    <a href="https://twitter.com/messages/compose?recipient_id=1567529924">Ask a Question</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
   </p>
