@@ -12,7 +12,7 @@ describe('useStarWarsQuote', () => {
     // add tests here
   })
 
-  test('should return a joke and set loading to false', async () => {
+  test('should return a quote and set loading to false', async () => {
     // const { result } = renderHook(() => useStarWarsQuote())
     // add tests here
   })
