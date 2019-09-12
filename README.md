@@ -20,6 +20,7 @@
   - [Workshop Goals](#workshop-goals)
   - [Workshop Outcomes](#workshop-outcomes)
 - [Prerequisites](#prerequisites)
+- [Pre-Workshop Instructions](#pre-workshop-instructions)
 - [Further Learning](#further-learning)
 - [Resources](#resources)
 
@@ -49,6 +50,18 @@ Although this workshop is not targeted at React experts you'll need the followin
 - moderate React experience
 - some familiarity with Hooks
 - an [npm account](https://www.npmjs.com/signup)
+
+
+## Pre-Workshop Instructions
+
+Before you join us for the workshop, please make sure to the following:
+1. [Download Zoom](https://zoom.us/support/download)
+2. Clone this repo so you have it locally
+3. Create an [npm account](https://www.npmjs.com/signup) (needed to publish your package)
+4. Install [`create-react-hook`](https://github.com/Hermanya/create-react-hook) globally
+ - `npm i -g create-react-hook`
+ - `yarn add global create-react-hook`
+ - or you can run it during the workshop using `npx create-react-hook
 
 ## Resources
 
