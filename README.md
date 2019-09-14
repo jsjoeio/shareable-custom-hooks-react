@@ -50,6 +50,8 @@ Although this workshop is not targeted at React experts you'll need the followin
 - moderate React experience
 - some familiarity with Hooks
 - an [npm account](https://www.npmjs.com/signup)
+- `node v10.16.3` or greater
+- `npm v6.9.0` or greater
 
 
 ## Pre-Workshop Instructions
