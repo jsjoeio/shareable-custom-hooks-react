@@ -8,7 +8,7 @@ export function FeedbackEffectComponent() {
   React.useEffect(() => {
     async function getStarsWarsQuote() {
       // Get placeholder text
-      const response = await fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
+      const response = await fetch('https://starwars-quote-proxy-gi0d3x1lz.now.sh/api/randomQuote')
       const data = await response.json()
       const quote = data.starWarsQuote
       setText(quote)
