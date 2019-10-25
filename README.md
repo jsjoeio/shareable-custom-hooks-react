@@ -5,7 +5,7 @@
   <p align="center">
     <br />
     <!-- UPDATE THIS WITH EGGHEAD LINK -->
-    <a href="https://ti.to/egghead-live-online-events/create-publish-custom-react-hooks-with-joe-previte/"><strong>Take Workshop</strong></a>
+    <a href="https://egghead.io/courses/shareable-custom-hooks-in-react"><strong>Take Workshop</strong></a>
     <br />
     <br />
     <a href="https://twitter.com/messages/compose?recipient_id=1567529924">Ask a Question</a>
@@ -16,12 +16,12 @@
 
 ## Table of Contents
 
-- [About the Workshop](#about-the-workshop)
+- [Table of Contents](#table-of-contents)
+- [About The Workshop](#about-the-workshop)
   - [Workshop Goals](#workshop-goals)
   - [Workshop Outcomes](#workshop-outcomes)
 - [Prerequisites](#prerequisites)
 - [Pre-Workshop Instructions](#pre-workshop-instructions)
-- [Further Learning](#further-learning)
 - [Resources](#resources)
 
 ## About The Workshop

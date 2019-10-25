@@ -8,7 +8,7 @@ export class FeedbackClassComponent extends React.Component {
 
   componentDidMount() {
     // Get placeholder text
-    fetch('http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
+    fetch('https://starwars-quote-proxy-gi0d3x1lz.now.sh/api/randomQuote')
       .then(response => response.json())
       .then(data =>
         this.setState({
